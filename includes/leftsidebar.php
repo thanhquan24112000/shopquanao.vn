@@ -3,5 +3,5 @@
 <div class="containe-fluid" >
   <div class="row">
   <!--content left-->
-    <div class="col-1 ">Left side Bar</div>   
+    <div class="col-1 "></div>   
      <!--End content left-->

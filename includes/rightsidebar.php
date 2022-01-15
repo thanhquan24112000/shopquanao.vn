@@ -1,5 +1,5 @@
 <!--content right-->
-    <div class="col-1 ">Right Side Bar</div>   
+    <div class="col-1 "></div>   
     <!--End content right-->
   </div>
 </div>

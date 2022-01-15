@@ -1,7 +1,7 @@
 <!--Footer-->
 <footer class="mainfooter" role="contentinfo">
  
-  <div class="footer-middle">
+  <div class="footer-middle" style="padding-left: 16px;>
   <div class="containe-fluid">
     <div class="row">
       <div class="col-md-3 col-sm-6">
@@ -71,7 +71,7 @@
   </div>
   </div>
   <div class="footer-bottom">
-    <div class="container">
+    <div class="container" style="margin-left: auto; display: flex;justify-content: center;">
       <div class="row">
         <div class="col-xs-12">
           <!--Footer Bottom-->

@@ -46,7 +46,7 @@ $pquery = $db->query($sql);
 
 </nav>
 <!--Top Narbar 2-->
-<nav class="navbar navbar-expand-sm bg-light navbar-dark">
+<nav class="navbar navbar-expand-sm bg-light navbar-dark" style="display:flex; justify-content:flex-end;">
 
 <!--Button giỏ hàng-->
 <?php
@@ -70,17 +70,17 @@ $pquery = $db->query($sql);
 		  }
 		 if($flag==false)
 		 { ?>
-			<button class="btn btn-danger" onclick="location.href='cart.php'" style="position: relative; left:800px;"><i class="fa fa-cart-plus" style="font-size:20px; color:white;"></i> Giỏ Hàng (0) SP</button>
+			<button class="btn btn-danger" onclick="location.href='cart.php'" ><i class="fa fa-cart-plus" style="font-size:20px; color:white;"></i> Giỏ Hàng (0) SP</button>
 		 <?php }
 		 else
 		 {
 			 $cart=$_SESSION['cart']; ?>
-	  		<button class="btn btn-danger" onclick="location.href='cart.php'" style="position: relative; left:800px;"><i class="fa fa-cart-plus" style="font-size:20px; color:white;"></i> Giỏ Hàng (<?=count($cart)?>) SP</button>
+	  		<button class="btn btn-danger" onclick="location.href='cart.php'" ><i class="fa fa-cart-plus" style="font-size:20px; color:white;"></i> Giỏ Hàng (<?=count($cart)?>) SP</button>
 		 <?php }
 		?>
         
         
-    <div class="dropdown" style="position: relative; left:810px;">
+    <div class="dropdown" style="">
     	<?php if(!isset($_SESSION['username']) || empty($_SESSION['username'])): ?>
         <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-user-circle-o" style="font-size:20px;color:white;"></i>  			Tài Khoản
         </button>

@@ -25,7 +25,7 @@ $rs_result = mysqli_query($db, $sql);
     <div class="col-10">
  
 		<!--Sản phẩm hót-->    
-  		<div><hr style="display: block;margin-top: 0.5em;margin-bottom: 0.5em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 3px; width:900px;"><h2 class="text-center" style="margin:10px 0 20px 0;"><a href="#" class="san-pham-xxx"> Sản Phẩm Hot Nhất </a></h2><hr style="display: block;margin-top: 0.5em;margin-bottom: 0.5em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 3px; margin-bottom:20px;"></div>
+  		<div><hr style="display: block;margin-top: 0.5em;margin-bottom: 0.5em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 3px; width:900px;"><h2 class="text-center" style="margin:10px 0 20px 0;"><a href="#" class="san-pham-xxx" style="font-family: 'Poppins', sans-serif;"> Sản Phẩm Hot Nhất </a></h2><hr style="display: block;margin-top: 0.5em;margin-bottom: 0.5em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 3px; margin-bottom:20px;"></div>
       	<div class="row" id="product_slider">
       <div id="carousel" class='outerWrapper'>
             <div class="item">
@@ -110,7 +110,7 @@ $rs_result = mysqli_query($db, $sql);
     
     <br /><br /> 
     <!--Sản phẩm mới nhất-->
-      <div><hr style="display: block;margin-top: 0.5em;margin-bottom: 0.5em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 3px; width:900px;"><h2 class="text-center" style="margin:10px 0 20px 0;"><a href="#" class="san-pham-xxx"> Sản Phẩm Mới Nhất </a></h2><hr style="display: block;margin-top: 0.5em;margin-bottom: 0.5em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 3px; margin-bottom:20px;"></div>
+      <div><hr style="display: block;margin-top: 0.5em;margin-bottom: 0.5em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 3px; width:900px;"><h2 class="text-center" style="margin:10px 0 20px 0;"><a href="#" class="san-pham-xxx" style="font-family: 'Poppins', sans-serif;"> Sản Phẩm Mới Nhất </a></h2><hr style="display: block;margin-top: 0.5em;margin-bottom: 0.5em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 3px; margin-bottom:20px;"></div>
       <div class="row" id="target-content">
      <?php  
 		while ($product = mysqli_fetch_assoc($rs_result)) {
