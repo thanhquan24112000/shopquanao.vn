@@ -108,13 +108,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
+        body{ font: 14px sans-serif;background-image:url(images/logosignup2.jpg);
+            background-repeat: no-repeat;
+    background-position-x: right; background-position-y: top;
+    }
+        .wrapper{ width: 350px; padding: 20px;margin-left: 215px;;margin-top:180px;  }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <h2>Đăng Ký Tài Khoản</h2>
+        <h2 style="    margin: 20px 0px;
+    font-size: 34px;">Đăng Ký Tài Khoản</h2>
         <p>Vui lòng điền đầy đủ thông tin để tạo tài khoản.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
@@ -133,8 +137,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Đăng Ký">
-                <input type="reset" class="btn btn-default" value="Reset">
+                <input type="submit" class="btn btn-primary" style="background-color: #212529;
+    border-color: #495057;
+    width: -webkit-fill-available;" value="Đăng Ký">
+                <!-- <input type="reset" class="btn btn-default" value="Reset"> -->
             </div>
             <p>Bạn đã có tài khoản trước đó? <a href="login.php">Đăng nhập tại đây</a>.</p>
         </form>

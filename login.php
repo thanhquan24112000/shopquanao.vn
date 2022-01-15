@@ -81,14 +81,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
+        body{ font: 14px sans-serif; background-image:url(images/bglogin.jpg);
+            background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    
+    height: 100vh; }
+        .wrapper{ width: 350px; padding: 20px;     margin-left: 215px;;margin-top:180px; }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <h2>Login</h2>
-        <p>Vui lòng điền chính xác thông tin để đăng nhập.</p>
+        <h2 style="font-size: 34px; margin-bottom: 30px;">Login</h2>
+        <p style="margin-bottom: 15px;">Vui lòng điền chính xác thông tin để đăng nhập.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Tài Khoản</label>
@@ -101,7 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Đăng Nhập">
+                <input type="submit" class="btn btn-primary" style="background-color: #000;width: -webkit-fill-available;" value="Đăng Nhập">
             </div>
             <p>Chưa có tài khoản? <a href="register.php">Đăng Ký Ngay</a>.</p>
         </form>
