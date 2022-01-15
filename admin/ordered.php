@@ -427,16 +427,29 @@ $_GET = array_map('sanitize', $_GET);
 			$category=$parent['category'].' ~ '.$child['category'];
 		?>
         <tr>
-          <td><?php echo $product['title'];?></td>
-          <td><?php echo $product['price'];?> đ</td>
-          <td><?=$category ;?></td>
-		  <td></td>
-          <td>
-          	<a href="products.php?featured=<?php echo (($product['featured']== 0)?'1':'0');?>&id=<?=$product['id'];?>" title="<?=($product['featured']==1)?'kích hoat':'không kích hoạt'; ?>"><i class="fa fa-<?=($product['featured']==1)?'toggle-on':'toggle-off'; ?>" style="font-size:34px"></i></a>
-          </td>
-          <td>
-        </td>
-     	<td><a href="products.php?edit=<?=$child['id'];?>"><i class="fa fa-gear" style="font-size:34px" title="sửa"></i></a>&nbsp <a href="products.php?delete=<?=$child['id'];?>"><i class="fa fa-trash" style="font-size:34px" title="xóa"></i></a></td>
+		<?php
+			require("../core/init.php");
+
+			$sql=mysqli_query($db,"select ordercode,name,username,order_date,money,state from order_management order by ordercode desc");
+			while($data=mysqli_fetch_assoc($sql))
+			{
+        		echo"<tr>";
+        			echo"<td>$data[ordercode]</td>";
+					$timestamp=strtotime($data['order_date']);
+					$date=date('d-m-Y',$timestamp);
+            		echo"<td>$date</td>";
+            		echo"<td>$data[username]</td>";
+            		echo"<td>".number_format($data['money'])."</td>";
+					?>
+					<td>
+					<a href="products.php?featured=<?php echo (($product['featured']== 0)?'1':'0');?>&id=<?=$product['id'];?>" title="<?=($product['featured']==1)?'kích hoat':'không kích hoạt'; ?>"><i class="fa fa-<?=($product['featured']==1)?'toggle-on':'toggle-off'; ?>" style="font-size:34px"></i></a>
+				    </td>
+					<?php
+            		echo"<td></td>";
+            		echo"<td><a href='detail_cart.php?ordercode=$data[ordercode]' style='color:#09F'>Xem</a></td>";
+        		echo"</tr>";
+			}
+		?>
         </tr>
         <?php endwhile;?>
       </tbody>
