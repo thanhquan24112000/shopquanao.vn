@@ -1,40 +1,3 @@
-
-<?php
-include 'includes/head.php';
-?>
-<!-- <div class="order">
-	<table>
-    	<tr style="background:#6CF; color: #FFF">
-        	<th style="width:100px">Đơn hàng</th>
-            <th style="width:120px">Ngày</th>
-            <th>Tên tài khoản</th>
-            <th style="width:120px">Tổng tiền</th>
-            <th style="width:100px">Trạng thái</th>
-            <th style="width:100px">Xem</th>
-            <th style="width:100px">Xóa</th>
-        </tr>
-        <?php
-			require("../core/init.php");
-
-			$sql=mysqli_query($db,"select ordercode,name,username,order_date,money,state from order_management order by ordercode desc");
-			while($data=mysqli_fetch_assoc($sql))
-			{
-        		echo"<tr>";
-        			echo"<td>$data[ordercode]</td>";
-					$timestamp=strtotime($data['order_date']);
-					$date=date('d-m-Y',$timestamp);
-            		echo"<td>$date</td>";
-            		echo"<td>$data[username]</td>";
-            		echo"<td>".number_format($data['money'])."</td>";
-            		echo"<td>$data[state]</td>";
-            		echo"<td><a href='detail_cart.php?ordercode=$data[ordercode]' style='color:#09F'>Xem</a></td>";
-            		echo"<td><a href='del_bill.php?ordercode=$data[ordercode]' style='color:#F9F'>Xóa</a></td>";
-        		echo"</tr>";
-			}
-		?>
-   	</table>
-</div> -->
-
 <?php
 
 //function sanitize($dirty){
@@ -267,7 +230,7 @@ $_GET = array_map('sanitize', $_GET);
 	}
 ?>
 	<!--thêm sản phẩm-->
-	<h2 align="center">Thêm Sản Phẩm Mới</h2><br />
+	<!-- <h2 align="center">Thêm Sản Phẩm Mới</h2><br /> -->
     <!--Thuộc tính enctype=”multipart/form-data” ở trong thẻ <form mục đích của thuộc tính này để trình duyệt có thể hiểu và mã hóa dữ liệu thành nhiều phần.-->
 	<form action="products.php?add=1" method="post"  enctype="multipart/form-data">
     <div class="row">  
@@ -341,7 +304,7 @@ $_GET = array_map('sanitize', $_GET);
     </div>
     <div class="row">  
   		<div class="col-1"></div>
-        <div class="col-10" style="margin-left:1020px;"><input type="submit"  class="btn btn-success" value="Thêm Sản Phẩm"></div>
+        <!-- <div class="col-10" style="margin-left:1020px;"><input type="submit"  class="btn btn-success" value="Thêm Sản Phẩm"></div> -->
         <div class="col-1"></div>
     </div>
     <div class="clearfix"></div>
@@ -393,7 +356,7 @@ $_GET = array_map('sanitize', $_GET);
 <br />
 
 
-<h2 align="center">Quản Lý Đơn Hàng</h2>
+<h2 align="center">Quản Lý Nhân Viên</h2>
 <hr>
 <div class="row">  
   <div class="col-1"></div>
@@ -404,14 +367,12 @@ $_GET = array_map('sanitize', $_GET);
     <table class="table table-hover table-bordered" style="text-align:center">
       <thead style="color:#FFFFFF;">
         <tr class="bg-dark">
-          <th>Đơn hàng</th>
-          <th>Ngày</th>
-          <th>Tên tài khoản</th>
-		  <th>Tổng tiền</th>
-          <th>Trạng thái thanh toán</th>
-		  <th>Trạng thái đơn hàng</th>
-          <th>Xem</th>
-
+          <th>Tên nhân viên</th>
+          <th>Chức vụ</th>
+          <th>Số điện thoại</th>
+          <th>Email</th>
+          <th>Trạng Thái </th>
+          
         </tr>
       </thead>
       <tbody>
@@ -430,13 +391,12 @@ $_GET = array_map('sanitize', $_GET);
           <td><?php echo $product['title'];?></td>
           <td><?php echo $product['price'];?> đ</td>
           <td><?=$category ;?></td>
-		  <td></td>
+          <td></td>
           <td>
           	<a href="products.php?featured=<?php echo (($product['featured']== 0)?'1':'0');?>&id=<?=$product['id'];?>" title="<?=($product['featured']==1)?'kích hoat':'không kích hoạt'; ?>"><i class="fa fa-<?=($product['featured']==1)?'toggle-on':'toggle-off'; ?>" style="font-size:34px"></i></a>
           </td>
-          <td>
-        </td>
-     	<td><a href="products.php?edit=<?=$child['id'];?>"><i class="fa fa-gear" style="font-size:34px" title="sửa"></i></a>&nbsp <a href="products.php?delete=<?=$child['id'];?>"><i class="fa fa-trash" style="font-size:34px" title="xóa"></i></a></td>
+        
+     	
         </tr>
         <?php endwhile;?>
       </tbody>

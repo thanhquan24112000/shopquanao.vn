@@ -16,7 +16,16 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="user.php">Người Dùng</a>
-      </li>       
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="nhanvien.php">Nhân Viên</a>
+      </li>   
+      <li class="nav-item">
+        <a class="nav-link" href="ncc.php">Nhà Cung Cấp</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="dvvc.php">Đơn Vị Vận Chuyển</a>
+      </li>     
     </ul>
   </div>  
 </nav>
