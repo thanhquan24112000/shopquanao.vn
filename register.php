@@ -108,9 +108,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style type="text/css">
-        body{ font: 14px sans-serif;background-image:url(images/logosignup2.jpg);
+        body{ font: 14px sans-serif;background-image:url(images/a.jpg);
             background-repeat: no-repeat;
-    background-position-x: right; background-position-y: top;
+    background-position-x: right;     background-position-y: center;
     }
         .wrapper{ width: 350px; padding: 20px;margin-left: 215px;;margin-top:180px;  }
     </style>

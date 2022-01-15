@@ -14,12 +14,10 @@
 	
 ?>
 
-<div style=" margin-bottom:100px">
-	
-     
-     
+<div class="cart_style" style=" margin-bottom:100px">
 	<?php
-    	echo"<table border='1' style='text-align:center; border-collapse:collapse'>";
+    	echo"<table border='1' style='text-align:center;
+		width: 722px;	 border-collapse:collapse;margin: auto;'>";
       		echo"<tr>";
         		echo"<th style='width:60px'>Xóa</th>";
         		echo"<th style='width:150px'>Sản phẩm</th>";
@@ -104,14 +102,24 @@
 		  	echo"</tr>";
 		  
 		echo"</table>";
-		echo"<a href='index.php' style='float:left; color:red;'>Mua tiếp sản phẩm</a>";
+		echo"<div style=' padding:20px;   display: flex;
+		flex-direction: column;
+		align-items: flex-end;     width: 1140px;'><a href='index.php' style=' color:red; float:center;'>Mua tiếp sản phẩm</a>";
 		}
 	?>
     <br />
-     <?php  if(!isset($_SESSION['username']) || empty($_SESSION['username'])){ echo "Bạn chưa đăng nhập, vui lòng đăng nhập để thanh toán hoặc click vào thanh toán ngay ở dưới!";?><div><input type="button" onclick="alert('Bạn chưa đăng nhập!')" value="Thanh Toán"/></div>
-     <div><a href="login_to_cart.php" style="color:#FF0000;">Đăng Nhập ngay</a></div>
-     <div>Tiếp tục <a href="payment_without_login.php" style="color:#FF0000;">thanh toán ngay</a> không cần đăng nhập</div>
-	 <?php } else{?><a href="payment_with_login.php">Thanh Toán</a><?php }?> 
+     <?php  if(!isset($_SESSION['username']) || empty($_SESSION['username'])){ echo "Bạn chưa đăng nhập, vui lòng đăng nhập để thanh toán hoặc click vào thanh toán ngay ở dưới!";?><div><input type="button" style=" \background: black;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    margin: 20px 0;" onclick="alert('Bạn chưa đăng nhập!')" value="Thanh Toán"/></div>
+     <div ><a href="login_to_cart.php" style="color:#FF0000;">Đăng Nhập ngay</a></div>
+     <div>Tiếp tục <a href="payment_without_login.php" style="color:#FF0000;">thanh toán ngay</a> không cần đăng nhập</div></div>
+	 <?php } else{?><a style=" \background: black;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    margin: 20px 0;" href="payment_with_login.php">Thanh Toán</a><?php }?> 
 </div>
 
 <!--footer-->

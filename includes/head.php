@@ -217,13 +217,18 @@ input[type=text]:focus {
 
 .container {
   position: relative;
-  margin-left:-10px;
+  /* margin-left:-10px; */
 }
 
 .image {
   display: block;
 }
-
+.cart_style table tr th{
+  padding: 15px 0px;
+}
+.cart_style table tr td{
+  padding: 15px 0px;
+}
 .overlay {
   position: absolute;
   bottom: 0;
