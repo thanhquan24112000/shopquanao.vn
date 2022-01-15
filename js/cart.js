@@ -1,0 +1,32 @@
+$(document).ready(function(){
+	$(".quantity").change(function(){
+		slm=$(this).val();
+		id=$(this).attr("data-id");
+		$.ajax({
+			  url:"js/xuly_cart.php",
+			  type:"post",
+			  data:"slm="+slm+"&id="+id,
+			  async:true,
+			  success:function(kq){
+				  	location.reload();
+				  }
+			  });
+	});
+});
+
+$(document).ready(function(){
+	$(".size").change(function(){
+		slm=$(this).val();
+		id=$(this).attr("data-id");
+		$.ajax({
+			  url:"js/xuly_cart.php",
+			  type:"post",
+			  data:"sm="+sm+"&id="+id,
+			  async:true,
+			  success:function(kq){
+				  	location.reload();
+				  }
+			  });
+	});
+});
+
